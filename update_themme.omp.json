@@ -22,7 +22,7 @@
         {
           "foreground": "p:blue",
           "style": "plain",
-          "template": "{{ .UserName }} <#ffffff>on</> ",
+          "template": "{{ .UserName }} <#ffffff>on</>",
           "type": "session"
         },
          
