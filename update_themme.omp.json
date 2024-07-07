@@ -20,7 +20,7 @@
         },
         
         {
-          "foreground": "p:blue",
+          "foreground": "#f74f4f",
           "style": "plain",
           "template": "{{ .UserName }} <#ffffff>on</>",
           "type": "session"
