@@ -13,7 +13,7 @@
       "alignment": "left",
       "segments": [
           {
-          "background": "#0c7bbb",
+          //"background": "#0c7bbb",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
