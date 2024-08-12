@@ -31,7 +31,7 @@
             "ubuntu": "\uf31c",
             "windows": "\ue70f"
           },
-          "foreground": "#ffffff",//"p:os",
+          "foreground": "p:os",
           "style": "plain",
           "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",  //"{{.Icon}} ",
           "type": "os"
