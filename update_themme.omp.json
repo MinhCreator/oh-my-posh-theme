@@ -12,7 +12,7 @@
     { 
       "alignment": "left",
       "segments": [
-        {
+          {
           "background": "#0c7bbb",
           "properties": {
             "alpine": "\uf300",
@@ -35,7 +35,7 @@
           "style": "plain",
           "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",  //"{{.Icon}} ",
           "type": "os"
-        },
+          },
         
         {
           "foreground": "#f74f4f",
