@@ -15,7 +15,7 @@
         {
           "foreground": "p:os",
           "style": "plain",
-          "template": "{{.Icon}} ",
+          "template": "  {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",  //"{{.Icon}} ",
           "type": "os"
         },
         
