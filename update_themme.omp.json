@@ -5,7 +5,7 @@
         "closer": "p:os",
         "pink": "#F4B8E4",
         "lavender": "#ff0000",//"#0080ff",//"#BABBF1",
-        "blue":  "#34f200"//"#8CAAEE"
+        "red":  "#fc0303"//"#8CAAEE"
   },
   
   "blocks": [
@@ -38,7 +38,7 @@
           },
         
         {
-          "foreground": "#f74f4f",
+          "foreground": "p:red",
           "style": "plain",
           "template": "{{ .UserName }} <#ffffff>on</>",
           "type": "session"
