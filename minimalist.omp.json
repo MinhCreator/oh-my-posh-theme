@@ -43,29 +43,32 @@
           "type": "os",
           "style": "plain"
         },
+        // user name
+        {
+          "foreground": "#ff8181",
+          "style": "plain",
+          //"template": "{{ .UserName }}@{{ .HostName }} ",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        // shell displayed 
+        {
+          // "background": "#FEF5ED",
+          "foreground": "#82eff3",
+          "style": "plain",
+          "template": "used \uf489 {{ .Name }} ",
+          "type": "shell"
+        },
         // path
         {
           "properties": {
-            "folder_icon": "..\uf07b ..",
+            "folder_icon": "...",
             "home_icon": "~",
             "style": "agnoster_short"
           },
           "template": "{{ .Path }} ",
-          "foreground": "#e1e0ff",
           "type": "path",
           "style": "plain"
-        },
-        //execution time
-        {
-          "type": "executiontime",
-          "style": "plain",
-          "foreground": "#ffffff",
-          "template": "<#fefefe>took ~</> {{ .FormattedMs }} ",
-          "properties": {
-            "threshold": 500,
-            "style": "austin",
-            "always_enabled": true
-          }
         }
       ]
     },
@@ -88,24 +91,32 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "foreground": "p:lavender",
           "type": "git",
           "style": "plain"
         },
         // file type
         {
+          "type": "node",
+          "style": "plain",
+          //"powerline_symbol": "\ue0b0",
+          //"background": "#000000",
+          "foreground": "#45bf17",
+          "template": " \ue718 {{ .Full }} "
+        },
+        {
           "type": "lua",
           "style": "plain",
-          "foreground": "white",
-          "background": "blue",
+          "foreground": "#25b9fd",
+          //"background": "blue",
           "template": "  {{ .Full }} "
         },
         {
           "type": "python",
           "style": "plain",
           "foreground": "#f2ff7c",
-          "background": "#916cff00",
+          //"background": "#916cff00",
           "template": "  {{ .Full }} "
         },
         // npm
@@ -113,7 +124,7 @@
           "type": "npm",
           "style": "plain",
           "foreground": "#ff4949",
-          "background": "#ffeb3b",
+          //"background": "#ffeb3b",
           "template": " {{ .Full }} "
         },
         // react
@@ -130,6 +141,18 @@
           "foreground": "#193549",
           "background": "#ffeb3b",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }} {{ if .Type }}{{.Type}}{{ end }}{{ end }}  "
+        },
+        //execution time
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": "<#fefefe>\ueba2 {{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 500,
+            //"style": "austin",
+            "always_enabled": true
+          }
         }
       ]
     },
